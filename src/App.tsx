@@ -1,15 +1,16 @@
 import "./css/App.css";
-import "./view/player-comp";
-import "./model/game-play";
-import ComputerPlayerView from "./view/player-comp";
+import "./view/ComputerPlayerView";
+import "./game/game-play";
+import ComputerPlayerView from "./view/ComputerPlayerView";
+import { PlayerNumber } from "./model/player";
 
 function App() {
     return (
         <div className="App">
             <p>Rock, Paper, Scissors</p>
             <div id="play-area">
-                <ComputerPlayerView />
-                <ComputerPlayerView />
+                <ComputerPlayerView playerNumber={PlayerNumber.Player1} />
+                <ComputerPlayerView playerNumber={PlayerNumber.Player2} />
             </div>
         </div>
     );

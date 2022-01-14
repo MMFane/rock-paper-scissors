@@ -1,4 +1,5 @@
 @import "./play-area.css";
+@import "./characters.css";
 
 .App {
   text-align: center;
