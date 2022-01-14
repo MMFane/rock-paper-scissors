@@ -1,25 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import "./game/game-play.ts";
+import "./css/App.css";
+import "./view/player-comp";
+import "./model/game-play";
+import ComputerPlayerView from "./view/player-comp";
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <p>Rock, Paper, Scissors</p>
+            <div id="play-area">
+                <ComputerPlayerView />
+                <ComputerPlayerView />
+            </div>
         </div>
     );
 }
