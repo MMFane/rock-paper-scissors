@@ -1,17 +1,17 @@
-import headReady from "../art/robot/head-ready.png";
-import handReady from "../art/robot/hand-ready.png";
 import { PlayerNumber } from "../model/player";
 
 interface IProps {
     playerNumber: PlayerNumber;
+    headSrc: string;
+    handSrc: string;
 }
 
-export default function Robot({ playerNumber }: IProps) {
+export default function Robot({ playerNumber, headSrc, handSrc }: IProps) {
     const flipClass = playerNumber === PlayerNumber.Player1 ? "" : "flip-x";
 
     const head = (
         <img
-            src={headReady}
+            src={headSrc}
             className={flipClass}
             height="200px"
             alt={`robot-${playerNumber}`}
@@ -20,7 +20,7 @@ export default function Robot({ playerNumber }: IProps) {
 
     const hand = (
         <img
-            src={handReady}
+            src={handSrc}
             className={flipClass}
             height="100px"
             alt={`robot-${playerNumber}`}

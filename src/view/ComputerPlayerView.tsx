@@ -1,5 +1,5 @@
 import { PlayerNumber } from "../model/player";
-import Robot from "./RobotView";
+import RobotAnimatorController from "../controllers/robotAnimatorController";
 
 interface IProps {
     playerNumber: PlayerNumber;
@@ -8,7 +8,7 @@ interface IProps {
 export default function ComputerPlayerView({ playerNumber }: IProps) {
     return (
         <div>
-            <Robot playerNumber={playerNumber} />
+            <RobotAnimatorController playerNumber={playerNumber} />
         </div>
     );
 }
